@@ -5,7 +5,9 @@ https://frightened-wasp-robe.cyclic.app/enroll
 
 - clone this repo
 
+- make .env file with variables URI=<mongodb_url> & PORT=3000 
+
 - docker build -t yoga_form .
 
-- docker container run -e URI=<mongodb_url> -e PORT=3000 -d yoga_form
+- docker container run -d yoga_form
 
