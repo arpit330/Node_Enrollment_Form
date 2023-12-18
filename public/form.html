@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,200&family=Open+Sans:wght@400;500;600&family=Oswald:wght@300&display=swap"
+        rel="stylesheet">
+    <title>Yoga Enrollment Form</title>
+    <style>
+        body {
+            display: flex;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .center-form {
+            max-width: 50%;
+            width: 100%;
+        }
+
+        .form-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+            /* max-width: 50%; */
+        }
+
+        .heading-block {
+            border-radius: 10px;
+            background-color: white;
+            border: 0.5pt solid #8e8f91 ;
+            padding: 20px;
+        }
+
+        body {
+            background-color: #FFE4C4;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/enroll" method="post" class="was-validated center-form">
+        <div class="heading-block" >
+            <div class="form-heading">
+                <h1>Yoga Class Enrollment Form</h1>
+            </div>
+            <label>Instructions for Yoga classes :</label>
+            <ul>
+                <li>Only people within the age limit of 18-65 can enroll for the monthly classes.</li>
+                <li>You can enroll any day but they will have to pay for the entire month. The monthly fee is
+                    500/- Rs .</li>
+                <li>There are total of 4 batches a day, 6-7AM, 7-8AM, 8-9AM and 5-6PM. </li>
+                <li>
+                    You can choose any batch in a month but can only move to any other batch from next month.
+                </li>
+            </ul>
+
+        </div>
+        <br>
+
+        <div class="form-group" >
+            <label for="inputEmail3">Email</label>
+            <input type="email" name="email" class="form-control" id="inputEmail3" placeholder="Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="inputName3">Full Name</label>
+            <input type="text" name="username" class="form-control" id="inputName3" placeholder="Full Name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="inputMobile">Mobile Number</label>
+            <input type="text" name="mobile" class="form-control" id="inputMobile" placeholder="10 digit number"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="inputAge">Age</label>
+            <input type="number" name="age" class="form-control" id="inputAge" placeholder="Age" min="16" max="65"
+                required>
+            <small id="ageHelpBlock" class="form-text text-muted">
+                *Age must be between 16 to 65 years
+            </small>
+        </div>
+
+        <fieldset class="form-group">
+            <label>Pick Batch Timings</label>
+            <div class="row">
+                <!-- <legend class="col-form-label col-sm-2 pt-0">Batch Timings</legend> -->
+
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="batch" id="gridRadios1" value="option1"
+                            checked>
+                        <label class="form-check-label" for="gridRadios1">
+                            6-7AM
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="batch" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            7-8AM
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="batch" id="gridRadios3" value="option3">
+                        <label class="form-check-label" for="gridRadios3">
+                            8-9AM
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="batch" id="gridRadios4" value="option4">
+                        <label class="form-check-label" for="gridRadios4">
+                            5-6PM
+                        </label>
+                    </div>
+
+
+                </div>
+                <small id="ageHelpBlock" class="form-text text-muted">
+                    *Batch timings cannot be changed for respective month once enrolled.
+                </small>
+            </div>
+        </fieldset>
+        <br>
+        <h4>PAYMENT DETAILS</h4>
+        <div class="form-group">
+            <label for="creditCardNumber">Credit Card Number</label>
+            <input type="text" name="creditCardNumber" class="form-control" id="creditCardNumber"
+                placeholder="16 digit card number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cvv">CVV/CVC</label>
+            <input type="text" name="cvv" class="form-control" id="cvv" placeholder="000" required>
+        </div>
+
+        <div class="form-group">
+            <label for="expiryDate">Expiry Date</label>
+            <input type="text" name="cardExpiry" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+        </div>
+
+
+
+        <div class="custom-control custom-checkbox mb-3">
+            <input type="checkbox" class="custom-control-input" id="customControlValidation1" required>
+            <label class="custom-control-label" for="customControlValidation1">Agree to terms and conditions for payment
+                cancellations and refunds policy.</label>
+            <div class="invalid-feedback">You must agree before submitting.</div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary">Enroll</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Bootstrap JS and dependencies (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
