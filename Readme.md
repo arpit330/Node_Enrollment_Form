@@ -14,15 +14,15 @@ https://frightened-wasp-robe.cyclic.app/enroll
 ## Database Design (ER Diagram):
 Used a MongoDB database to store User Data such as: 
 
-#### Email (Primary Key)
-#### Name
-#### Mobile No.
-#### Age
-#### Batch
+- Email (Primary Key)
+- Name
+- Mobile No.
+- Age
+- Batch
 
 Payment Details
-#### Credit Card Number
-#### CVV
-#### Card Expiry
-#### Payment Date
+- Credit Card Number
+- CVV
+- Card Expiry
+- Payment Date
 
