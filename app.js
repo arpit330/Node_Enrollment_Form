@@ -9,6 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('view engine', 'ejs');
 
 mongoose.connect(process.env.URI);
 const db = mongoose.connection;
@@ -25,7 +26,6 @@ app.get('/', (req, res) => {
 });
 
 app.use('/enroll', enrollRoute);
-
 
 
 app.listen(PORT, () => {

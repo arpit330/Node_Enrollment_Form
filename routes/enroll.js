@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
 
         const paymentStatus = await CompletePayment(req.body);
         if (!paymentStatus) {
-            res.status(400).send("Payment Failed");
+            res.status(500).render(path.join(__dirname, '../public', 'error.ejs'), { errorMessage: err.message });
         }
 
 
@@ -59,10 +59,12 @@ router.post('/', async (req, res) => {
             };
             await User.updateOne({ email: req.body.email }, update);
         }
-        res.status(200).send("User Enrolled Successfully")
+        res.status(200).sendFile(path.join(__dirname, '../public', 'success.html'));
+        
     }
     catch (err) {
-        res.status(401).json({ message: err.message });
+        res.status(500).render(path.join(__dirname, '../public', 'error.ejs'), { errorMessage: err.message });
+        // res.status(401).json({ message: err.message });
     }
 })
 
