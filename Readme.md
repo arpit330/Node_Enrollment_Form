@@ -11,7 +11,7 @@ https://frightened-wasp-robe.cyclic.app/enroll
 
 - docker container run -d yoga_form
 
-## Database Design (ER Diagram):
+## Database Design :
 Used a MongoDB database to store User Data such as: 
 
 - Email (Primary Key)
