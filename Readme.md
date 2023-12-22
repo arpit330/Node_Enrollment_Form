@@ -5,7 +5,7 @@ https://frightened-wasp-robe.cyclic.app/enroll
 
 - Clone this repo
 
-- Make .env file with variables URI=<mongodb_url> & PORT=3000 
+- Make `.env` file with variables URI=`mongodb_URI` & PORT=`3000` 
 
 - RUN npm install 
  
@@ -15,11 +15,12 @@ https://frightened-wasp-robe.cyclic.app/enroll
 
 - Clone this repo
 
-- Make .env file with variables URI=<mongodb_url> & PORT=3000 
+- Make `.env` file with variables URI=`mongodb_URI` & PORT=`3000` 
 
-- RUN docker build -t yoga_form .
+- RUN `docker build -t yoga_form` .
 
-- RUN docker container run -d yoga_form
+- RUN `docker container run -d yoga_form`
+
 
 ## Database Design :
 Used a MongoDB database to store User Data such as: 
@@ -32,7 +33,7 @@ Used a MongoDB database to store User Data such as:
 - Batch
 
 ### Payment Details
-- User_ID
+- User_ID (Foreign Key)
 - Credit Card Number
 - CVV
 - Card Expiry
