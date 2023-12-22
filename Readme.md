@@ -32,6 +32,7 @@ Used a MongoDB database to store User Data such as:
 - Batch
 
 ### Payment Details
+- User_ID
 - Credit Card Number
 - CVV
 - Card Expiry

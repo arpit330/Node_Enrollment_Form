@@ -22,25 +22,25 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    creditCardNumber: {
-        type: String,
-        required: true
-    },
-    cvv: {
-        type: String,
-        required: true
-    },
-    cardExpiry: {
-        type: String,
-        required: true
-    },
+    // creditCardNumber: {
+    //     type: String,
+    //     required: true
+    // },
+    // cvv: {
+    //     type: String,
+    //     required: true
+    // },
+    // cardExpiry: {
+    //     type: String,
+    //     required: true
+    // },
     feePaid: {
         type: Boolean,
         required: true
     },
-    paymentDate: {
-        type: Date
-    }
+    // paymentDate: {
+    //     type: Date
+    // }
 });
 
 // yourSchema.pre('save', function (next) {
